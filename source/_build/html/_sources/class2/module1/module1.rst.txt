@@ -74,6 +74,12 @@ Step 2 - Publish Arcadia application with NGINX+ and Controller
          ab75d7bd60bb        nginx                            "nginx -g 'daemon of…"   7 months ago        Up 13 hours         0.0.0.0:80->80/tcp                                                 lab-nginx
          35ddc5adc34d        sameersbn/bind:9.11.3-20190706   "/sbin/entrypoint.sh…"   9 months ago        Up 13 hours         0.0.0.0:53->53/tcp, 0.0.0.0:10000->10000/tcp, 0.0.0.0:53->53/udp   bind
 
+     You will now see three containers deployed:
+   
+     - NginxPlusAPI - which will an NGINX+ instances named "API" on NGINX Controller
+     - NginxPlusDevPortal - which will an NGINX+ instances named "devportal" on NGINX Controller
+     - NginxPlusWebApp - which will an INGINX+ instances "WebApp" on NGINX Controller
+   
    #. Check if NGINX+ instances appears in the controller
 
       #. In the controller GUI, click top ``left corner icon``, and ``infrastructure``
