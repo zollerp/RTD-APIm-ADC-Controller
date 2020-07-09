@@ -19,7 +19,7 @@ Step 1 - Deploy Arcadia App2 with a CI/CD pipeline like a DevOps
 #. In Gitlab, click on Administrator / Arcadia-App2
    
    #. Click on file ``deploy``
-   #. Click ``edit`` and make a modification - like YES !!!!!
+   #. Click ``edit`` and make a modification - ´´like YES !!!!!´´
    #. Click ``Commit changes``
 
    .. note :: At this moment, you simulate a commit like a DevOps. This ``commit`` will trigger a ``webhook`` to ``Jenkins``, so that Jenkins execute a ``pipeline``.
