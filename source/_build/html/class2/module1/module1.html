@@ -239,10 +239,10 @@
 </ol>
 </li>
 <li><p class="first">Started 3 NGINX+ instances in a docker</p>
-<ol class="arabic simple">
-<li>WebSSH to <code class="docutils literal notranslate"><span class="pre">CICD</span> <span class="pre">and</span> <span class="pre">DOCKER</span> <span class="pre">(NGINX</span> <span class="pre">API</span> <span class="pre">gw,</span> <span class="pre">Dev</span> <span class="pre">Portal)</span></code></li>
-<li>Run a <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">ps</span></code></li>
-</ol>
+<ol class="arabic">
+<li><p class="first">WebSSH to <code class="docutils literal notranslate"><span class="pre">CICD</span> <span class="pre">and</span> <span class="pre">DOCKER</span> <span class="pre">(NGINX</span> <span class="pre">API</span> <span class="pre">gw,</span> <span class="pre">Dev</span> <span class="pre">Portal)</span></code></p>
+</li>
+<li><p class="first">Run a <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">ps</span></code></p>
 <div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span>ubuntu@ip-10-1-1-9:~$ docker ps
 CONTAINER ID        IMAGE                            COMMAND                  CREATED             STATUS              PORTS                                                              NAMES
 bf86e23a9807        nginx-plus:36v1                  &quot;sh /entrypoint.sh&quot;      33 seconds ago      Up 31 seconds       10.1.20.9:8080-&gt;80/tcp, 10.1.20.9:8443-&gt;443/tcp                    NginxPlusAPI
@@ -254,15 +254,14 @@ ab75d7bd60bb        nginx                            &quot;nginx -g &#39;daemon 
 </div>
 </li>
 </ol>
-<blockquote>
-<div><p>You will now see three containers deployed:</p>
-<ul class="simple">
-<li>NginxPlusAPI - which will an NGINX+ instances named “API” on NGINX Controller</li>
-<li>NginxPlusDevPortal - which will an NGINX+ instances named “devportal” on NGINX Controller</li>
-<li>NginxPlusWebApp - which will an INGINX+ instances “WebApp” on NGINX Controller</li>
-</ul>
-</div></blockquote>
-<ol class="arabic">
+</li>
+<li><p class="first">You will now see three containers deployed</p>
+<ol class="arabic simple">
+<li>NginxPlusAPI - which will become an NGINX+ instances named “API” on NGINX Controller</li>
+<li>NginxPlusDevPortal - which will become an NGINX+ instances named “devportal” on NGINX Controller</li>
+<li>NginxPlusWebApp - which will become an INGINX+ instances “WebApp” on NGINX Controller</li>
+</ol>
+</li>
 <li><p class="first">Check if NGINX+ instances appears in the controller</p>
 <ol class="arabic simple">
 <li>In the controller GUI, click top <code class="docutils literal notranslate"><span class="pre">left</span> <span class="pre">corner</span> <span class="pre">icon</span></code>, and <code class="docutils literal notranslate"><span class="pre">infrastructure</span></code></li>
@@ -271,6 +270,11 @@ ab75d7bd60bb        nginx                            &quot;nginx -g &#39;daemon 
 <img alt="../../_images/instances.png" class="align-center" src="../../_images/instances.png" />
 </li>
 <li><p class="first">Deployed an AS3 declaration into the BIG-IP in order to publish the NGINX+ instance externally</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">On the BIG-IP you will see an new Partition called <em>Production</em> and a Virtual Server called <em>VS_WebApp</em>.</p>
+</div>
+<img alt="../../_images/big_ip_as3_partition.png" class="align-center" src="../../_images/big_ip_as3_partition.png" />
 </li>
 </ol>
 </div></blockquote>
@@ -309,12 +313,8 @@ ab75d7bd60bb        nginx                            &quot;nginx -g &#39;daemon 
 </li>
 </ol>
 <div class="line-block">
-<div class="line"><br /></div>
-</div>
-<blockquote>
-<div><img alt="../../_images/cp_main_2.png" class="align-center" src="../../_images/cp_main_2.png" />
-</div></blockquote>
-<div class="line-block">
+<div class="line">.. image:: ../pictures/module1/cp_main_2.png
+   :align: center</div>
 <div class="line"><br /></div>
 </div>
 <blockquote>

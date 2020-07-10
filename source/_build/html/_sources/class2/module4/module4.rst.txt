@@ -64,7 +64,7 @@ Step 1 - Send an attack
 Step 2 - Push AS3 declaration to deploy the WAF policy
 ******************************************************
 
-#. In ``Jenkins``, click on DeployWAF pipeline
+#. In ``Jenkins``, click on ``DeployWAF pipeline``
 #. Run the ``pipeline``
 #. In ``Chrome``, launch an incognito window, and retry the attack
 #. Attack fails

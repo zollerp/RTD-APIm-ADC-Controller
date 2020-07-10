@@ -63,23 +63,21 @@ Step 2 - Publish Arcadia application with NGINX+ and Controller
 
       #. WebSSH to ``CICD and DOCKER (NGINX API gw, Dev Portal)``
       #. Run a ``docker ps``
+      
+         .. code :: bash
 
-      .. code :: bash
-
-         ubuntu@ip-10-1-1-9:~$ docker ps
-         CONTAINER ID        IMAGE                            COMMAND                  CREATED             STATUS              PORTS                                                              NAMES
-         bf86e23a9807        nginx-plus:36v1                  "sh /entrypoint.sh"      33 seconds ago      Up 31 seconds       10.1.20.9:8080->80/tcp, 10.1.20.9:8443->443/tcp                    NginxPlusAPI
-         74d679bdf5fb        nginx-plus:36v1                  "sh /entrypoint.sh"      33 seconds ago      Up 31 seconds       80/tcp, 10.1.20.12:8090->8090/tcp                                  NginxPlusDevPortal
-         ac12c0f3148a        nginx-plus:36v1                  "sh /entrypoint.sh"      33 seconds ago      Up 32 seconds       10.1.20.10:8080->80/tcp, 10.1.20.10:8443->443/tcp                  NginxPlusWebApp
-         ab75d7bd60bb        nginx                            "nginx -g 'daemon of…"   7 months ago        Up 13 hours         0.0.0.0:80->80/tcp                                                 lab-nginx
-         35ddc5adc34d        sameersbn/bind:9.11.3-20190706   "/sbin/entrypoint.sh…"   9 months ago        Up 13 hours         0.0.0.0:53->53/tcp, 0.0.0.0:10000->10000/tcp, 0.0.0.0:53->53/udp   bind
-
-     You will now see three containers deployed:
+            ubuntu@ip-10-1-1-9:~$ docker ps
+            CONTAINER ID        IMAGE                            COMMAND                  CREATED             STATUS              PORTS                                                              NAMES
+            bf86e23a9807        nginx-plus:36v1                  "sh /entrypoint.sh"      33 seconds ago      Up 31 seconds       10.1.20.9:8080->80/tcp, 10.1.20.9:8443->443/tcp                    NginxPlusAPI
+            74d679bdf5fb        nginx-plus:36v1                  "sh /entrypoint.sh"      33 seconds ago      Up 31 seconds       80/tcp, 10.1.20.12:8090->8090/tcp                                  NginxPlusDevPortal
+            ac12c0f3148a        nginx-plus:36v1                  "sh /entrypoint.sh"      33 seconds ago      Up 32 seconds       10.1.20.10:8080->80/tcp, 10.1.20.10:8443->443/tcp                  NginxPlusWebApp
+            ab75d7bd60bb        nginx                            "nginx -g 'daemon of…"   7 months ago        Up 13 hours         0.0.0.0:80->80/tcp                                                 lab-nginx
+            35ddc5adc34d        sameersbn/bind:9.11.3-20190706   "/sbin/entrypoint.sh…"   9 months ago        Up 13 hours         0.0.0.0:53->53/tcp, 0.0.0.0:10000->10000/tcp, 0.0.0.0:53->53/udp   bind
+   #. You will now see three containers deployed
    
-     - NginxPlusAPI - which will become an NGINX+ instances named "API" on NGINX Controller
-     - NginxPlusDevPortal - which will become an NGINX+ instances named "devportal" on NGINX Controller
-     - NginxPlusWebApp - which will become an INGINX+ instances "WebApp" on NGINX Controller
-   
+      #. NginxPlusAPI - which will become an NGINX+ instances named "API" on NGINX Controller
+      #. NginxPlusDevPortal - which will become an NGINX+ instances named "devportal" on NGINX Controller
+      #. NginxPlusWebApp - which will become an INGINX+ instances "WebApp" on NGINX Controller
    #. Check if NGINX+ instances appears in the controller
 
       #. In the controller GUI, click top ``left corner icon``, and ``infrastructure``
@@ -90,6 +88,9 @@ Step 2 - Publish Arcadia application with NGINX+ and Controller
 
    #. Deployed an AS3 declaration into the BIG-IP in order to publish the NGINX+ instance externally
 
+      .. note :: On the BIG-IP you will see an new Partition called *Production* and a Virtual Server called *VS_WebApp*.
+      .. image:: ../pictures/module1/big_ip_as3_partition.png
+         :align: center
 
 .. note :: It is time to configure the NGINX+ instances in order to publish Arcadia application (main and back services)
 

@@ -1,13 +1,14 @@
 Workflow of the demo
 ####################
 
-The demo is split in 3 classes
-    - Deploy, publish and protect Arcadia Web application
+The demo is split in 2 classes
+    
+    - Class 2: Deploy, publish and protect Arcadia Web application
         - Deploy and publish Arcadia Main App
         - Deploy and publish Money Transfer App
         - Deploy and publish Refer Friends App
-        - Apply WAF policy
-    - Publish and protect Arcadia API
+        - Apply BIG-IP WAF Security Policy
+    - Class 3: Publish and protect Arcadia API
         - Publish the API using an OpenAPI 3.0 spec file
         - Protect the API with Advanced WAF and APM using OpenAPI 3.0 spec file
         - Discover the new Developer Portal

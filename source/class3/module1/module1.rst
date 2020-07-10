@@ -90,9 +90,13 @@ Step 3 - Publish the API
 
       .. image:: ../pictures/module1/component_1.png
          :align: center
+         :scale: 60%
+      
+      .. image:: ../pictures/module1/component_2.png
+         :align: center
          :scale: 70%
 
-      .. image:: ../pictures/module1/component_2.png
+      .. image:: ../pictures/module1/component_3.png
          :align: center
          :scale: 70%
 
