@@ -48,3 +48,5 @@ $RECYCLE.BIN/
 #
  */build 
  */source/_build
+ _build/
+.vscode/
