@@ -76,7 +76,7 @@ Step 2 - Publish Arcadia application with NGINX+ and Controller
 
      You will now see three containers deployed:
    
-     - NginxPlusAPI - which become will an NGINX+ instances named "API" on NGINX Controller
+     - NginxPlusAPI - which will become an NGINX+ instances named "API" on NGINX Controller
      - NginxPlusDevPortal - which will become an NGINX+ instances named "devportal" on NGINX Controller
      - NginxPlusWebApp - which will become an INGINX+ instances "WebApp" on NGINX Controller
    
