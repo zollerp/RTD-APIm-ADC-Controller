@@ -118,7 +118,6 @@ Step 2 - Publish Arcadia application with NGINX+ and Controller
    .. image:: ../pictures/module1/cp_main_1.png
       :align: center
 |
-
    .. image:: ../pictures/module1/cp_main_2.png
       :align: center
 |
